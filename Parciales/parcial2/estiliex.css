@@ -1,0 +1,147 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--back-color);
+}
+
+:root 
+{
+    --back-color: #26335d;
+    --boton-color: #ff734f;
+    --primary-color: #d9d9d9;
+}
+
+.titulo p 
+{
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.titulo p:hover 
+{
+    cursor: pointer;
+}
+
+.navbar 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content ul 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.content ul li 
+{
+    margin: 0 10px;
+    font-weight: 800;
+}
+
+.content ul li:hover 
+{
+    cursor: pointer;
+}
+
+.boton 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.boton button 
+{
+    margin-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: var(--boton-color);
+    border: none;
+}
+
+.boton button:hover 
+{
+    cursor: pointer;
+}
+
+.content-info 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 100px;
+}
+
+.content-1 
+{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.content-1 .contenido 
+{
+    font-size: 70px;
+    padding: 30px 0;
+}
+
+.content-1 .contenido-2 
+{
+    font-size: 18px;
+}
+
+
+.content-2 .cuadrado 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 400px;
+    background-color: var(--primary-color);
+}
+
+.botones
+{
+    padding-top: 20px;
+}
+
+.botones .btn-1
+{
+    padding: 15px 40px;
+    background-color: var(--boton-color);
+    border: none;
+}
+
+.botones .btn-1:hover
+{
+    cursor: pointer;
+}
+
+.botones .btn-2{
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 1px solid var(--boton-color);
+}
+
+.botones .btn-2:hover{
+    cursor: pointer;
+}
