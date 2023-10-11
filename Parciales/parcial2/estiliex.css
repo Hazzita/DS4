@@ -2,7 +2,7 @@
 {
     margin: 0;
     padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat';
     color: var(--primary-color);
     background-color: var(--back-color);
 }
@@ -41,12 +41,14 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    border: none;
 }
 
 .content ul li 
 {
     margin: 0 10px;
     font-weight: 800;
+    border: none;
 }
 
 .content ul li:hover 
@@ -128,7 +130,8 @@
 {
     padding: 15px 40px;
     background-color: var(--boton-color);
-    border: none;
+    border-radius: 5px;
+    border: 1px solid var(--boton-color);
 }
 
 .botones .btn-1:hover
@@ -140,6 +143,7 @@
     padding: 15px 40px;
     background-color: transparent;
     border: 1px solid var(--boton-color);
+    border-radius: 5px;
 }
 
 .botones .btn-2:hover{
