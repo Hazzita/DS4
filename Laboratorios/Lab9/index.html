@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piramide</title>
+    <link rel="stylesheet" href="estiliex.css">
 </head>
+
 <body>
-        
+    <section class="container">
+        <div class="card">
+            <form action="" method="post" class="card-form" id="form-piramide" onsubmit="return crearPiramides()">
+                <label for="number">Ingrese el tamaño de la piramide</label>
+                <input type="number" name="cantidad-piramide" min="0" placeholder="5" required>
+                <button type="submit">Crear piramide</button>
+            </form>
+        </div>
+
+        <div class="piramide" id="div-piramide">
+            
+        </div>
+    </section>
 </body>
+
 </html>
+<script src="piramide.js"></script>
