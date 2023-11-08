@@ -7,7 +7,7 @@ document.getElementById('rowForm').addEventListener('submit', function(event) { 
         findMaxPath(container); // Encuentra el camino con el mayor peso
         highlightMaxPath(container); // Resalta el camino con el mayor peso
     } else {
-        alert('Ingrese un número válido entre 1 y 50');
+        alert('Ingrese un número válido entre 1 y 50'); 
     }
 });
 
@@ -102,7 +102,7 @@ function highlightMaxPath(pyramid, path) { // Resalta el camino con el mayor pes
     }
 
     let resultado = document.getElementById('resultado'); // Obtiene el elemento con el id 'resultado'
-    resultado.innerHTML = 'cantidad final: ' + cantidad_final; // Muestra el total
+    resultado.innerHTML = 'Resultado: : ' + cantidad_final; // Muestra el total
     mostrarLista(nuevo); // Muestra la lista
 }
 
@@ -112,7 +112,6 @@ function mostrarLista(valor) { // Muestra la lista
     for (let i = 0; i < valor.length; i++) {  // Recorre todos los elementos de la lista
         let li = document.createElement('div'); // Crea un elemento de lista
         li.innerHTML = valor[i]; // Agrega el valor del elemento a la lista
-        lista.appendChild(li); // Agrega el elemento a la lista
-    }
+        lista.appendChild(li); // Agrega el elemento a la lista
+    }
 }
-
