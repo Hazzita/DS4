@@ -1,0 +1,115 @@
+* 
+{
+    margin: 0; 
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-form 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-form label,
+.card-form input,
+.card-form button 
+{
+    margin: 5px;
+    width: 100%;
+}
+
+.piramide 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.row 
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.square
+{
+    border-radius: 8%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 180% sans-serif;
+}
+
+.cantidad_final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.lista div
+{
+    list-style: none;
+    border-radius: 8%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado{
+    margin-top: 10px;
+}
+
+.square:hover
+{
+    background-color:blue;
+}
+
