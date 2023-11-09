@@ -57,7 +57,7 @@ function findMaxPath(pyramid) { // Encuentra el camino con el mayor peso
     }
 
     // Ahora, construye el camino con el mayor peso
-    const path = [];
+    const path = []; // Almacena el camino con el mayor peso
     let columnIndex = 0; // Comenzamos en el primer cuadro de la primera fila
 
     for (let i = 0; i < pyramidArray.length; i++) { // Recorre todas las filas
@@ -65,7 +65,7 @@ function findMaxPath(pyramid) { // Encuentra el camino con el mayor peso
         if (i < pyramidArray.length - 1) { // En todas las filas excepto la última, elige el cuadro adyacente con el mayor peso
             // En todas las filas excepto la última, elige el cuadro adyacente con el mayor peso
             if (pyramidArray[i + 1][columnIndex] > pyramidArray[i + 1][columnIndex + 1]) {
-                columnIndex = columnIndex; // Mantén la misma columna
+                columnIndex = columnIndex; // No cambia de columna
             } else {
                 columnIndex = columnIndex + 1; // Mueve a la siguiente columna
             }
@@ -102,7 +102,7 @@ function highlightMaxPath(pyramid, path) { // Resalta el camino con el mayor pes
     }
 
     let resultado = document.getElementById('resultado'); // Obtiene el elemento con el id 'resultado'
-    resultado.innerHTML = 'Resultado: : ' + cantidad_final; // Muestra el total
+    resultado.innerHTML = 'Resultado: ' + cantidad_final; // Muestra el total
     mostrarLista(nuevo); // Muestra la lista
 }
 
@@ -113,5 +113,5 @@ function mostrarLista(valor) { // Muestra la lista
         let li = document.createElement('div'); // Crea un elemento de lista
         li.innerHTML = valor[i]; // Agrega el valor del elemento a la lista
         lista.appendChild(li); // Agrega el elemento a la lista
-    }
+}
 }
