@@ -46,12 +46,12 @@ function findMaxPath(pyramid) { // Encuentra el camino con el mayor peso
     // Convierte la pirámide en una matriz bidimensional de números
     for (let i = 0; i < rows.length; i++) { // Recorre todas las filas
         const squares = rows[i].querySelectorAll('.square'); // Obtiene todos los cuadros de la fila actual
-        pyramidArray.push(Array.from(squares).map(square => parseInt(square.textContent))); // Convierte los cuadros en números y los agrega a la matriz
+        pyramidArray.push(Array.from(squares).map(square => parseInt(square.textContent))); // Agrega la fila actual a la matriz bidimensional
     }
 
     // Comienza desde la segunda fila hacia arriba y actualiza los valores máximos en cada celda
-    for (let i = pyramidArray.length - 2; i >= 0; i--) { 
-        for (let j = 0; j < pyramidArray[i].length; j++) {
+    for (let i = pyramidArray.length - 2; i >= 0; i--) { // Recorre todas las filas excepto la última
+        for (let j = 0; j < pyramidArray[i].length; j++) { // Recorre todos los cuadros de la fila actual
             pyramidArray[i][j] += Math.max(pyramidArray[i + 1][j], pyramidArray[i + 1][j + 1]); // Actualiza el valor máximo en la celda actual
         }
     }
@@ -67,7 +67,7 @@ function findMaxPath(pyramid) { // Encuentra el camino con el mayor peso
             if (pyramidArray[i + 1][columnIndex] > pyramidArray[i + 1][columnIndex + 1]) {
                 columnIndex = columnIndex; // No cambia de columna
             } else {
-                columnIndex = columnIndex + 1; // Mueve a la siguiente columna
+                columnIndex = columnIndex + 1; // Mueve a la siguiente columna   
             }
         }
     }
@@ -81,9 +81,9 @@ function findMaxPath(pyramid) { // Encuentra el camino con el mayor peso
 
 function highlightMaxPath(pyramid, path) { // Resalta el camino con el mayor peso
     const rows = pyramid.querySelectorAll('.row'); // Obtiene todas las filas de la pirámide
-    let currentRow = 0;
-    let cantidad_final = 0;
-    let nuevo = [];
+    let currentRow = 0; // Comienza en la primera fila
+    let cantidad_final = 0; // Almacena el total
+    let nuevo = []; // Almacena la lista
 
     for (const row of rows) { // Recorre todas las filas
         const squares = row.querySelectorAll('.square'); // Obtiene todos los cuadros de la fila actual
