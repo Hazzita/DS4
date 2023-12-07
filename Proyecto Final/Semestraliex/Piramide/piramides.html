@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de piramides</title>
+    <link rel="stylesheet" href="estiliex.css" />
+  </head>
+  <body>
+    <div class="container" id="container"></div>
+    <a href="index.html"><img src="data:image/png;base64,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" alt="flechita hacia atras" width="35px"></a> 
+  </body>
+</html>
+        
+<script>
+  const container = document.querySelector(".container"); // Obtiene el contenedor de la pirámide
+  var httpget = new XMLHttpRequest();
+  httpget.open("GET", "http://localhost:4000/piramide", true);
+
+  httpget.onreadystatechange = function () {
+    if (httpget.readyState === 4 && httpget.status === 200) {
+      var piramidesText = httpget.responseText;
+      console.log(piramidesText);
+
+      // Extraer el contenido de la pirámide
+      var startIndex = piramidesText.indexOf("<div");
+      var endIndex = piramidesText.lastIndexOf("</div>") + 6;
+      var piramideContent = piramidesText.substring(startIndex, endIndex);
+
+      // Resto de tu código...
+      var piramidesArray = piramideContent
+        .replace(/\\/g, " ")
+        .replace(/"/g, " ")
+        .replace(/'/g, "")
+        .replace(/ piramide :/g, "")
+        .replace(/}/g, "")
+        .split(",");
+      let contador = 0; // Almacena el número de pirámides
+
+      piramidesArray.forEach((piramide) => {
+        // Recorre todas las pirámides
+        contador++; // Incrementa el número de pirámides
+
+        // Agrega el numero de piramide
+        const numero = document.createElement("div"); // Crea un elemento div para el numero de piramide
+        numero.classList.add("numero"); // Agrega la clase 'numero' al elemento div
+        numero.innerHTML = "<br><br>Piramide " + contador; // Agrega el numero de piramide al elemento div
+        container.appendChild(numero); // Agrega el numero de piramide al contenedor
+
+        const pyramid = document.createElement("div"); // Crea un elemento div para la pirámide
+        pyramid.classList.add("pyramid"); // Agrega la clase 'piramide' al elemento div
+        pyramid.innerHTML = piramide; // Agrega la pirámide al elemento div
+        container.appendChild(pyramid); // Agrega la pirámide al contenedor
+
+        // Resultado final
+        const resultado = document.createElement("div"); // Crea un elemento div para el resultado
+        resultado.classList.add("resultado"); // Agrega la clase 'resultado' al elemento div
+        resultado.innerHTML = "Resultado: " + findMaxPath(pyramid); // Agrega el resultado al elemento div
+        container.appendChild(resultado); // Agrega el resultado al contenedor
+      });
+    }
+  };
+
+  httpget.send();
+
+  function findMaxPath(pyramid) {
+    // Encuentra el camino con el mayor peso
+    const rows = pyramid.querySelectorAll(".row"); // Obtiene todas las filas de la pirámide
+    const pyramidArray = []; // Almacena la pirámide como una matriz bidimensional de números
+
+    // Convierte la pirámide en una matriz bidimensional de números
+    for (let i = 0; i < rows.length; i++) {
+      // Recorre todas las filas
+      const squares = rows[i].querySelectorAll(".square"); // Obtiene todos los cuadros de la fila actual
+      pyramidArray.push(
+        Array.from(squares).map((square) => parseInt(square.textContent))
+      ); // Agrega la fila actual a la matriz bidimensional
+    }
+
+    // Comienza desde la segunda fila hacia arriba y actualiza los valores máximos en cada celda
+    for (let i = pyramidArray.length - 2; i >= 0; i--) {
+      // Recorre todas las filas excepto la última
+      for (let j = 0; j < pyramidArray[i].length; j++) {
+        // Recorre todos los cuadros de la fila actual
+        pyramidArray[i][j] += Math.max(
+          pyramidArray[i + 1][j],
+          pyramidArray[i + 1][j + 1]
+        ); // Actualiza el valor máximo en la celda actual
+      }
+    }
+
+    // Ahora, construye el camino con el mayor peso
+    const path = []; // Almacena el camino con el mayor peso
+    let columnIndex = 0; // Comenzamos en el primer cuadro de la primera fila
+
+    for (let i = 0; i < pyramidArray.length; i++) {
+      // Recorre todas las filas
+      path.push(columnIndex); // Agrega el índice del cuadro actual al camino
+      if (i < pyramidArray.length - 1) {
+        // En todas las filas excepto la última, elige el cuadro adyacente con el mayor peso
+        // En todas las filas excepto la última, elige el cuadro adyacente con el mayor peso
+        if (
+          pyramidArray[i + 1][columnIndex] >
+          pyramidArray[i + 1][columnIndex + 1]
+        ) {
+          columnIndex = columnIndex; // No cambia de columna
+        } else {
+          columnIndex = columnIndex + 1; // Mueve a la siguiente columna
+        }
+      }
+    }
+
+    // Resalta el camino con el mayor peso
+    highlightMaxPath(pyramid, path);
+
+    // El valor máximo estará en la cima de la pirámide
+    return pyramidArray[0][0];
+  }
+
+  function highlightMaxPath(pyramid, path) {
+    // Resalta el camino con el mayor peso
+    const rows = pyramid.querySelectorAll(".row"); // Obtiene todas las filas de la pirámide
+    let currentRow = 0; // Comienza en la primera fila
+    let cantidad_final = 0; // Almacena el total
+    let nuevo = []; // Almacena la lista
+
+    for (const row of rows) {
+      // Recorre todas las filas
+      const squares = row.querySelectorAll(".square"); // Obtiene todos los cuadros de la fila actual
+      const index = path[currentRow]; // Obtiene el índice del cuadro actual
+
+      for (let i = 0; i < squares.length; i++) {
+        // Recorre todos los cuadros de la fila actual
+        if (i === index) {
+          // Si el cuadro actual es el cuadro en el camino
+          squares[i].style.backgroundColor = "yellow"; // Resalta el cuadro en el camino
+          cantidad_final += parseInt(squares[i].textContent); // Suma el valor del cuadro al total
+          nuevo.push(squares[i].textContent); // Agrega el valor del cuadro a la lista
+        } else {
+          squares[i].style.backgroundColor = ""; // Restablece el color de fondo
+        }
+      }
+      currentRow++; // Mueve a la siguiente fila
+    }
+
+    mostrarLista(nuevo); // Muestra la lista
+  }
+
+  function mostrarLista(valores) {
+    // Muestra la lista
+    const lista = document.createElement("div"); // Crea un elemento div para la lista
+    lista.classList.add("lista"); // Agrega la clase 'lista' al elemento div
+
+    for (let i = 0; i < valores.length; i++) {
+      const elementoLista = document.createElement("div"); // Crea un elemento div para cada elemento de la lista
+      elementoLista.textContent = valores[i]; // Agrega el valor del elemento a la lista
+      lista.appendChild(elementoLista); // Agrega el elemento a la lista
+    }
+
+    container.appendChild(lista); // Agrega la lista al contenedor
+  }
+</script>
