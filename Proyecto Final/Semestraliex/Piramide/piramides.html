@@ -23,16 +23,14 @@
       console.log(piramidesText);
 
       // Extraer el contenido de la pirámide
-      var startIndex = piramidesText.indexOf("<div");
-      var endIndex = piramidesText.lastIndexOf("</div>") + 6;
-      var piramideContent = piramidesText.substring(startIndex, endIndex);
+      var startIndex = piramidesText.indexOf("<div"); // Encuentra el índice del primer div
+      var endIndex = piramidesText.lastIndexOf("</div>") + 6; // Encuentra el índice del último div
+      var piramideContent = piramidesText.substring(startIndex, endIndex); // Extrae el contenido de la pirámide
 
       
       var piramidesArray = piramideContent
-        .replace(/\\/g, " ")
-        .replace(/"/g, " ")
-        .replace(/'/g, "")
-        .replace(/ piramide :/g, "")
+        .replace(/\\/g, " ") 
+        .replace(/ piramide :/g, "")  
         .replace(/}/g, "")
         .split(",");
       let contador = 0; // Almacena el número de pirámides

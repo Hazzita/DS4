@@ -57,6 +57,7 @@ function generatePyramid(rowCount) { // Genera la pirámide
     httpget.open("GET", "http://localhost:4000/piramide", true);
     httpget.send();
 
+    
     httpget.onreadystatechange = function() {
 
         if (httpget.readyState == 4 && httpget.status == 200 || !httpget.responseText.startsWith('message')) {
@@ -64,15 +65,13 @@ function generatePyramid(rowCount) { // Genera la pirámide
             if (piramideAnterior == null) {
                 piramideAnterior = piramide;
             } else {
-                piramideAnterior = piramideAnterior + ',' + piramide;
+                piramideAnterior = piramideAnterior + ',' + piramide; // Agrega la pirámide actual a la lista de pirámides
             }
-
-            //localStorage.setItem('piramide', JSON.stringify(piramideAnterior));
             //peticion post http
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("POST", "http://localhost:4000/piramide", true);
-            xmlhttp.setRequestHeader("Content-Type", "application/json");
-            xmlhttp.send(JSON.stringify({ piramide: piramideAnterior }));
+            var xmlhttp = new XMLHttpRequest(); // Crea un objeto XMLHttpRequest
+            xmlhttp.open("POST", "http://localhost:4000/piramide", true); // Abre una conexión POST con el backend
+            xmlhttp.setRequestHeader("Content-Type", "application/json");  // Agrega la cabecera 'Content-Type' con el valor 'application/json'
+            xmlhttp.send(JSON.stringify({ piramide: piramideAnterior })); // Envia la piramide al backend
         }
     }
 }

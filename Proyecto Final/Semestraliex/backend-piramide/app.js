@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Rutas (endpoints) 
 app.get('/', (req, res) => {
-    res.json({ message: 'Proyecto final piramide' });
+    res.json({ message: 'Proyecto final DS4 Rubén Jaén 8-947-1049 / Alvan Samudio 4-807-1931' });
 });
 
 // Rutas (endpoints)
